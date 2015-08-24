@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <UOPath></UOPath>
+  <RazorPath></RazorPath>
+  <SteamPath></SteamPath>
+  <SallosPath></SallosPath>
+  <Settings>
+    <GeneralSettings>
+      <GeneralSettings>
+        <Name>EnableTreeHack</Name>
+        <DisplayName>Enable Tree Hack</DisplayName>
+        <PossibleValues>
+          <string>True</string>
+          <string>False</string>
+        </PossibleValues>
+        <SelectedValue>False</SelectedValue>
+      </GeneralSettings>
+      <GeneralSettings>
+        <Name>SelectedAssistant</Name>
+        <DisplayName>Assistant Program</DisplayName>
+        <PossibleValues>
+          <string>Razor</string>
+          <string>Steam</string>
+          <string>Sallos</string>
+        </PossibleValues>
+        <SelectedValue>Razor</SelectedValue>
+      </GeneralSettings>
+      <GeneralSettings>
+        <Name>UpdateOnStart</Name>
+        <DisplayName>Enable Automatic Updates</DisplayName>
+        <PossibleValues>
+          <string>True</string>
+          <string>False</string>
+        </PossibleValues>
+        <SelectedValue>False</SelectedValue>
+      </GeneralSettings>
+    </GeneralSettings>
+  </Settings>
+</Config>

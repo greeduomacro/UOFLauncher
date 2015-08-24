@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="UOFLauncher.Views.TabItemHeader_View"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:command="http://www.galasoft.ch/mvvmlight"
+             xmlns:views="clr-namespace:UOFLauncher.Views"
+             mc:Ignorable="d" Width="Auto" Height="Auto"
+             DataContext="{Binding RelativeSource={RelativeSource self}}">
+    <Grid Width="210">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+            <Rectangle Style="{StaticResource HeaderRectangle}" Name="Icon" Margin="15 0 10 0"
+                       Width="{Binding ImageWidth}" Height="{Binding ImageHeight}" HorizontalAlignment="Center"
+                       VerticalAlignment="Center">
+                <Rectangle.Resources>
+                    <SolidColorBrush x:Key="BlackBrush" Color="Black" />
+                </Rectangle.Resources>
+                <Rectangle.OpacityMask>
+                    <VisualBrush Visual="{Binding ImageSource}" />
+                </Rectangle.OpacityMask>
+            </Rectangle>
+            <TextBlock Margin="10 0 0 0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Text}" />
+        </StackPanel>
+    </Grid>
+</UserControl>

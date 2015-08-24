@@ -1,0 +1,129 @@
+﻿<UserControl x:Class="UOFLauncher.Views.NavBar_View"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:views="clr-namespace:UOFLauncher.Views"
+             xmlns:classes="clr-namespace:UOFLauncher.Classes"
+             mc:Ignorable="d"
+             d:DesignHeight="650" d:DesignWidth="210"
+             DataContext="{Binding Source={StaticResource Locator}, Path=NavBar_VM}">
+
+    <TabControl TabStripPlacement="Left" Style="{StaticResource TabControlNavStyle}">
+
+        <TabItem x:Name="NewsTabItem" Style="{StaticResource TabItemNav}">
+            <TabItem.HeaderTemplate>
+                <DataTemplate>
+                    <views:TabItemHeader_View Text="News" ImageSource="{StaticResource appbar_newspaper}"
+                                              ImageWidth="22" ImageHeight="22" />
+                </DataTemplate>
+            </TabItem.HeaderTemplate>
+
+            <Border Padding="0 0 5 0">
+                <WebBrowser Margin="0 -10 0 0" ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                            HorizontalAlignment="Center" VerticalAlignment="Center"
+                            Source="http://news.uoforever.com" />
+            </Border>
+
+        </TabItem>
+
+        <classes:TabItemInstallUO x:Name="InstallUOTabItem" Visibility="{Binding ShowUoInstall}"
+                                  Style="{StaticResource TabItemNav}">
+            <TabItem.HeaderTemplate>
+                <DataTemplate>
+                    <views:TabItemHeader_View Text="Install Ultima Online" ImageSource="{StaticResource appbar_UO}"
+                                              ImageWidth="22" ImageHeight="30" />
+                </DataTemplate>
+            </TabItem.HeaderTemplate>
+        </classes:TabItemInstallUO>
+
+        <classes:TabItemPlay Visibility="{Binding ShowUOPlay}" x:Name="PlayTabItem" Style="{StaticResource TabItemNav}">
+            <TabItem.HeaderTemplate>
+                <DataTemplate>
+                    <views:TabItemHeader_View Text="Play" ImageSource="{StaticResource appbar_UO}" ImageWidth="22"
+                                              ImageHeight="30" />
+                </DataTemplate>
+            </TabItem.HeaderTemplate>
+        </classes:TabItemPlay>
+
+        <TabItem x:Name="UpdatesTabItem" Style="{StaticResource TabItemNav}">
+            <TabItem.HeaderTemplate>
+                <DataTemplate>
+                    <views:TabItemHeader_View Text="Update Manager" ImageSource="{StaticResource appbar_layer_add}"
+                                              ImageWidth="22" ImageHeight="22" />
+                </DataTemplate>
+            </TabItem.HeaderTemplate>
+            <ContentControl Content="{Binding Source={StaticResource Locator}, Path=Updates_VM}" />
+        </TabItem>
+
+        <classes:TabItemLink x:Name="ForumsTabItem" Style="{StaticResource TabItemNav}" Link="http://www.uoforum.com">
+            <TabItem.HeaderTemplate>
+                <DataTemplate>
+                    <views:TabItemHeader_View Text="Forums" ImageSource="{StaticResource appbar_chat}" ImageWidth="22"
+                                              ImageHeight="22" />
+                </DataTemplate>
+            </TabItem.HeaderTemplate>
+        </classes:TabItemLink>
+
+        <classes:TabItemLink x:Name="TwitchTabItem" Style="{StaticResource TabItemNav}"
+                             Link="http://www.live.uoforever.com">
+            <TabItem.HeaderTemplate>
+                <DataTemplate>
+                    <views:TabItemHeader_View Text="Action Camera" ImageSource="{StaticResource appbar_twitch}"
+                                              ImageWidth="22" ImageHeight="22" />
+                </DataTemplate>
+            </TabItem.HeaderTemplate>
+        </classes:TabItemLink>
+
+        <classes:TabItemLink x:Name="LegendsTabItem" Style="{StaticResource TabItemNav}"
+                             Link="http://www.uoforever.com/legends">
+            <TabItem.HeaderTemplate>
+                <DataTemplate>
+                    <views:TabItemHeader_View Text="Legends" ImageSource="{StaticResource appbar_sword}"
+                                              ImageWidth="22" ImageHeight="22" />
+                </DataTemplate>
+            </TabItem.HeaderTemplate>
+        </classes:TabItemLink>
+
+        <classes:TabItemLink x:Name="DonateTabItem" Style="{StaticResource TabItemNav}"
+                             Link="http://www.uoforever.com/donate.php">
+            <TabItem.HeaderTemplate>
+                <DataTemplate>
+                    <views:TabItemHeader_View Text="Donate" ImageSource="{StaticResource appbar_donate}"
+                                              ImageWidth="22" ImageHeight="25" />
+                </DataTemplate>
+            </TabItem.HeaderTemplate>
+        </classes:TabItemLink>
+
+        <TabItem x:Name="SettingsTabItem" VerticalAlignment="Stretch" Margin="0,171,0,-171"
+                 Style="{StaticResource TabItemNav}">
+            <TabItem.HeaderTemplate>
+                <DataTemplate>
+                    <views:TabItemHeader_View Text="Settings" ImageSource="{StaticResource appbar_settingsnew}"
+                                              ImageWidth="22" ImageHeight="22" />
+                </DataTemplate>
+            </TabItem.HeaderTemplate>
+            <ContentControl Content="{Binding Source={StaticResource Locator}, Path=Settings_VM}" />
+        </TabItem>
+
+        <classes:TabItemLink x:Name="HelpTabItem" VerticalAlignment="Stretch" Link="http://help.uoforever.com" Style="{StaticResource TabItemNav}"
+                 Margin="0,171,0,-171">
+            <TabItem.HeaderTemplate>
+                <DataTemplate>
+                    <views:TabItemHeader_View Text="Help" ImageSource="{StaticResource appbar_questionnew}"
+                                              ImageWidth="22" ImageHeight="22" />
+                </DataTemplate>
+            </TabItem.HeaderTemplate>
+        </classes:TabItemLink>
+
+        <classes:TabItemExit x:Name="ExitTabItem" Margin="0,171,0,-171" Style="{StaticResource TabItemNav}">
+            <TabItem.HeaderTemplate>
+                <DataTemplate>
+                    <views:TabItemHeader_View Text="Exit" ImageSource="{StaticResource appbar_powernew}"
+                                              ImageWidth="22" ImageHeight="22" />
+                </DataTemplate>
+            </TabItem.HeaderTemplate>
+        </classes:TabItemExit>
+
+    </TabControl>
+</UserControl>

@@ -1,0 +1,22 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vm="clr-namespace:UOFLauncher.ViewModels"
+                    xmlns:views="clr-namespace:UOFLauncher.Views">
+
+    <DataTemplate DataType="{x:Type vm:NavBar_ViewModel}">
+        <views:NavBar_View />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:TabItemHeader_ViewModel}">
+        <views:TabItemHeader_View />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:Updates_ViewModel}">
+        <views:Updates_View />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:Settings_ViewModel}">
+        <views:Settings_View />
+    </DataTemplate>
+
+</ResourceDictionary>

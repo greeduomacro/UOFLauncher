@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <UOPath>C:\Program Files (x86)\Electronic Arts\Ultima Online Classic</UOPath>
+  <RazorPath>C:\Users\Adam\Desktop\Razor</RazorPath>
+  <SallosPath />
+  <SteamPath />
+  <Settings>
+    <GeneralSettings>
+      <GeneralSettings>
+        <Name>EnableTreeHack</Name>
+        <DisplayName>Enable Tree Hack</DisplayName>
+        <PossibleValues>
+          <string>True</string>
+          <string>False</string>
+        </PossibleValues>
+        <SelectedValue>False</SelectedValue>
+      </GeneralSettings>
+      <GeneralSettings>
+        <Name>SelectedAssistant</Name>
+        <DisplayName>Assistant Program</DisplayName>
+        <PossibleValues>
+          <string>Razor</string>
+          <string>Steam</string>
+          <string>Sallos</string>
+        </PossibleValues>
+        <SelectedValue>Razor</SelectedValue>
+      </GeneralSettings>
+      <GeneralSettings>
+        <Name>UpdateOnStart</Name>
+        <DisplayName>Enable Automatic Updates</DisplayName>
+        <PossibleValues>
+          <string>True</string>
+          <string>False</string>
+        </PossibleValues>
+        <SelectedValue>False</SelectedValue>
+      </GeneralSettings>
+    </GeneralSettings>
+  </Settings>
+</Config>
